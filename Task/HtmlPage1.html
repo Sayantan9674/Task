@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/Script.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <link href="Styles.css" rel="stylesheet" />
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Contact Number</th>
+                    <th>Email</th>
+                    
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" placeholder="By name" ng-model="searchText.name" /></td>
+                    <td><input type="text" placeholder="By address" ng-model="searchText.address" /></td>
+                    <td><input type="text" placeholder="By contact no." ng-model="searchText.contact_number" /></td>
+                    <td><input type="text" placeholder="By email" ng-model="searchText.email" /></td>
+                </tr>
+                <tr ng-repeat="student in students|filter:searchText">
+
+                    <td>{{student.name}}</td>
+                    <td>{{student.address}}</td>
+                    <td>{{student.contact_number}}</td>
+                    <td>{{student.email}}</td>
+                    
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

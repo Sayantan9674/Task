@@ -26,10 +26,10 @@ namespace Task
         {
             List<Student> listStudents = new List<Student>();
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(cs))
+            using (SqlConnection n = new SqlConnection(cs))
             {
-                SqlCommand cmd = new SqlCommand("Select * from db_student", con);
-                con.Open();
+                SqlCommand cmd = new SqlCommand("Select * from db_student", n);
+                n.Open();
                 SqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {

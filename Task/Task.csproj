@@ -75,11 +75,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="student.cs" />
     <Compile Include="student.asmx.cs">
       <DependentUpon>student.asmx</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
+    <Compile Include="student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
